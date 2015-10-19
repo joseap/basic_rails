@@ -1,17 +1,18 @@
 Rails.application.routes.draw do
 
   resources :users
-  resources :posts
+  resources :home
 
   get 'home' => 'home#index'
   get 'home/:id' => 'home#show'
   get 'home/new' => 'home#new'
-  post 'home/new' => 'home#create'
-  get 'home/:id/edit' => 'home#edit'
+  post 'users/new' => 'users#create'
+  get 'users/:id/edit' => 'users#edit'
+  post 'users/:id' => 'users#edit'
   put 'home/:id' => 'home#update'
-  get 'home/:id' => 'home#destroy'
-
-
+  patch '/home/:id' => 'home#update'
+  delete 'home/:id' => 'home#destroy'
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -11,7 +11,7 @@ class HomeController < ApplicationController
 
 	# ======== DISPLAYS POST BY ID ======== #
 	def show
-		@user = User.find params[:id] 
+		@user = User.find(params[:id])
 	end
 
 	# ======== 'GET' PAGE SHOWING THE CREATE POST PAGE ======== #
@@ -27,7 +27,7 @@ class HomeController < ApplicationController
 
 	# ======== 'GET' PAGE TO UPDATE POST INFO ======== #
 	def edit
-		@user = User.find params[:id]
+		@user = User.find(params[:id])
 	end
 
 	# ======== 'PUT' PAGE TO UPDATE (REPLACE) POST INFO ======== #

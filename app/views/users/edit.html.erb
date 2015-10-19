@@ -1,4 +1,4 @@
-<h1>CREATE NEW USER</h1>
+<h1>Update User</h1>
 
 <%= form_for @user do |f| %>
 	<%= f.label "First Name" %>
@@ -9,8 +9,8 @@
 	<%= f.text_field :email %>
 	<%= f.label "Password" %>
 	<%= f.text_field :password %>
-	<%= f.submit :create %>
-	<br><br>
+	<%= f.submit :update %>
+	<br>
+	<br>
 	<%= link_to 'Go Back', home_index_path%>
-
 <% end %>
