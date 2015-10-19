@@ -1,0 +1,17 @@
+<h1>USER INDEX</h1>
+
+
+<h3><%= flash[:notice] if flash[:notice] %></h3>
+<h3><%= flash[:alert] if flash[:alert] %></h3>
+
+<% @users.each do |user| %>
+	<ul>
+		<li><%= user.fname %></li>
+		<li><%= user.lname %></li>
+		<li><%= user.email %></li>
+		<%= link_to 'Edit', home_edit_path %>
+		<%= link_to 'Delete' %>
+	</ul>
+<% end %>
+
+
